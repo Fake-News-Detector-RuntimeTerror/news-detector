@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>The True News</title>
+	<title>Fake News Detector</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -42,7 +42,7 @@
 		<div class="jumbotron p-3 p-md-5 my-3 text-white rounded bg-dark">
 	        <div class="col-md-6 px-0">
 	          <h1 class="display-4 font-italic">The True News</h1>
-	          <p class="lead my-3">The ultimate news detector</p>
+	          <p class="lead my-3">Let's leave our hands and win over Novel Corona Virus</p>
 	        </div>
       	</div>
 
@@ -50,27 +50,27 @@
 	        <div class="col-md-6">
 	          <div class="card flex-md-row mb-4 box-shadow h-md-250">
 	            <div class="card-body d-flex flex-column align-items-start">
-	              <strong class="d-inline-block mb-2 text-primary">World</strong>
+	              <strong class="d-inline-block mb-2 text-primary">Covid-19</strong>
 	              <h3 class="mb-0">
-	                <a class="text-dark" href="#">Featured post</a>
+	                <a class="text-dark" href="#">Spread</a>
 	              </h3>
-	              <div class="mb-1 text-muted">Nov 12</div>
+	              <div class="mb-1 text-muted">April 15</div>
 	              <a href="#">Continue reading</a>
 	            </div>
-	            <img class="card-img-right flex-auto d-none d-md-block" src="download.jpg" height="225px" wider="90px" alt="Card image cap">
+	            <img class="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhub.jhu.edu%2F2020%2F03%2F27%2Fmark-dredze-social-media-misinformation%2F&psig=AOvVaw2DtJ3AFBSMd1tiNC_6p-ac&ust=1587231759974000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDCkKmB8OgCFQAAAAAdAAAAABAD" src="download.jpg" height="225px" wider="90px" alt="Covid-19 Spread">
 	          </div>
 	        </div>
 	        <div class="col-md-6">
 	          <div class="card flex-md-row mb-4 box-shadow h-md-250">
 	            <div class="card-body d-flex flex-column align-items-start">
-	              <strong class="d-inline-block mb-2 text-success">Design</strong>
+	              <strong class="d-inline-block mb-2 text-success">Covid-19</strong>
 	              <h3 class="mb-0">
-	                <a class="text-dark" href="#">Post title</a>
+	                <a class="text-dark" href="#">Precautions</a>
 	              </h3>
-	              <div class="mb-1 text-muted">Nov 11</div>
+	              <div class="mb-1 text-muted">April 16</div>
 	              <a href="#">Continue reading</a>
 	            </div>
-	            <img class="card-img-right flex-auto d-none d-md-block" src="download.jpg" height="225px" wider="90px" alt="Card image cap">
+	            <img class="https://www.google.com/imgres?imgurl=https%3A%2F%2Fx-ray.ca%2Fwp-content%2Fuploads%2F2020%2F03%2FCOVID-19-handwashing.jpg&imgrefurl=https%3A%2F%2Fx-ray.ca%2Fdaily-insight%2Fcovid-19-precautions%2F&tbnid=4WRfkd_C0aaxkM&vet=12ahUKEwiQ9N2AgvDoAhUj0XMBHYxvANQQMyhIegUIARCBAQ..i&docid=FXsPoh17tXaz1M&w=2517&h=1685&q=covid%20precautions%20images&ved=2ahUKEwiQ9N2AgvDoAhUj0XMBHYxvANQQMyhIegUIARCBAQ" src="download.jpg" height="225px" wider="90px" alt="Covid-19 Precautions">
 	          </div>
 	        </div>
 	      </div>
@@ -87,7 +87,7 @@
 			$servername = "localhost";
 			$username = "root";
 			$password = "";
-			$dbname = "shopping";
+			$dbname = "newsdetector";
 
 			$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -95,7 +95,7 @@
 				die("Connection failed:" . $conn->connect_error);	
 			}
 
-			$sql = "SELECT faknews, realnews FROM FakeNewsDetector";
+			$sql = "SELECT fakenews, realnews FROM FakeNewsDetector";
 
 			$results = $conn->query($sql);
 			if($results->num_rows>0) {
@@ -103,11 +103,10 @@
 				echo "	
 	            <div class='col-md-4'>
 	              <div class='card mb-4 box-shadow h-100'>
-	                <img class='card-img-top' src='" . $row['image'] . "' alt='Card image cap' height='225px' wider='100px'>
+	                <img class='card-img-top' src='" . $row['fakenews'] . "' alt='Card image cap' height='225px' wider='100px'>
 	                <div class='card-body'>
-	                  <p class='card-text'>" . $row['description'] . "
-	                  <b><br>" . $row['price'] . "</b>
-	                  <br>" . $row['know'] . "</p>
+	                  <p class='card-text'>" . $row['realnews'] . "
+	                  <b></p>
 	                  <div class='d-flex justify-content-between align-items-center'>
 	                    <div class='btn-group'>
 	                      <button type='button' class='btn btn-sm btn-outline-secondary'>BUY</button>
@@ -125,9 +124,9 @@
 							        </button>
 							      </div>
 							      <div class='modal-body'>
-							        <p class='card-text'>" . $row['description'] . "
-					                <b><br>" . $row['price'] . "</b>
-					                <br>" . $row['know'] . "</p>
+							        <p class='card-text'>" . $row['fakenews'] . "
+					                <b><br>" . $row['realnews'] . "</b>
+					                
 							      </div>
 							      <div class='modal-footer'>
 							        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
