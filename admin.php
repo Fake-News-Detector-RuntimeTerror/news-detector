@@ -31,10 +31,9 @@ if(isset($_SESSION['username'])){
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">How CORONA spreads?</a>
+            <a class="dropdown-item" href="#">How it can be prevented?</a>
+          <a class="dropdown-item" href="#">Know more about CORONA Virus</a>
         </div>
       </li>
     </ul>
@@ -56,7 +55,7 @@ if(isset($_SESSION['username'])){
 				<input class="form-control" id="realnews" name="realnews" type="message" >
 			</div>
 			
-			<button class="btn btn-success" type="submit">Add product</button>
+			<button class="btn btn-success" type="submit">Add news</button>
       <a href="logout.php" class="btn btn-danger" style="margin-left:910px">Logout</a>
 		</form>
     
