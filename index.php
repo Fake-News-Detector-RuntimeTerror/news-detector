@@ -5,7 +5,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-dark bg-dark">
-  	<a class="navbar-brand" href="index.php">The True News</a>
+  	<a class="navbar-brand" href="index.php">The Fake News Detector</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,10 +24,9 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+         <a class="dropdown-item" href="#">How CORONA spreads?</a>
+            <a class="dropdown-item" href="#">How it can be prevented?</a>
+          <a class="dropdown-item" href="#">Know more about CORONA Virus</a>
         </div>
       </li>
     </ul>
@@ -57,7 +56,7 @@
 	              <div class="mb-1 text-muted">April 15</div>
 	              <a href="#">Continue reading</a>
 	            </div>
-	            <img class="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhub.jhu.edu%2F2020%2F03%2F27%2Fmark-dredze-social-media-misinformation%2F&psig=AOvVaw2DtJ3AFBSMd1tiNC_6p-ac&ust=1587231759974000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDCkKmB8OgCFQAAAAAdAAAAABAD" src="download.jpg" height="225px" wider="90px" alt="Covid-19 Spread">
+	            <img src="social_media_032720.jpg" height="225px" wider="90px" alt="Covid-19 Spread">
 	          </div>
 	        </div>
 	        <div class="col-md-6">
@@ -70,13 +69,11 @@
 	              <div class="mb-1 text-muted">April 16</div>
 	              <a href="#">Continue reading</a>
 	            </div>
-	            <img class="https://www.google.com/imgres?imgurl=https%3A%2F%2Fx-ray.ca%2Fwp-content%2Fuploads%2F2020%2F03%2FCOVID-19-handwashing.jpg&imgrefurl=https%3A%2F%2Fx-ray.ca%2Fdaily-insight%2Fcovid-19-precautions%2F&tbnid=4WRfkd_C0aaxkM&vet=12ahUKEwiQ9N2AgvDoAhUj0XMBHYxvANQQMyhIegUIARCBAQ..i&docid=FXsPoh17tXaz1M&w=2517&h=1685&q=covid%20precautions%20images&ved=2ahUKEwiQ9N2AgvDoAhUj0XMBHYxvANQQMyhIegUIARCBAQ" src="download.jpg" height="225px" wider="90px" alt="Covid-19 Precautions">
+	            <img src="COVID-19-handwashing.jpg" height="225px" wider="90px" alt="Covid-19 Precautions">
 	          </div>
 	        </div>
 	      </div>
 	    </div>
-
-	</div>
 
 	<div class="album py-5 bg-light">
         <div class="container">
@@ -87,7 +84,7 @@
 			$servername = "localhost";
 			$username = "root";
 			$password = "";
-			$dbname = "newsdetector";
+			$dbname = "Fakenewsdetector";
 
 			$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -103,13 +100,12 @@
 				echo "	
 	            <div class='col-md-4'>
 	              <div class='card mb-4 box-shadow h-100'>
-	                <img class='card-img-top' src='" . $row['fakenews'] . "' alt='Card image cap' height='225px' wider='100px'>
+	                <img class='card-img-top' src='" . $row['fakenews'] . "' alt='Covid-19' height='225px' wider='100px'>
 	                <div class='card-body'>
 	                  <p class='card-text'>" . $row['realnews'] . "
 	                  <b></p>
 	                  <div class='d-flex justify-content-between align-items-center'>
 	                    <div class='btn-group'>
-	                      <button type='button' class='btn btn-sm btn-outline-secondary'>BUY</button>
 	                      <button type='button' class='btn btn-sm btn-outline-secondary' data-toggle='modal' data-target='#exampleModalCenter'>Know More</button>
 
 
@@ -130,9 +126,6 @@
 							      </div>
 							      <div class='modal-footer'>
 							        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-							        <button type='button' class='btn btn-primary'>Add to cart</button>
-							        <button type='button' class='btn btn-danger'>BUY</button>
-							      </div>
 							    </div>
 							  </div>
 							</div>
@@ -145,7 +138,7 @@
             }
 			}
 			else{
-				echo '<p>No Products to Show</p>';
+				echo '<p>No News to Show</p>';
 			}
             ?>
         	</div>    
